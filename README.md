@@ -1,6 +1,6 @@
-Portfolio Website.
+# Portfolio Website.
 
-##A multi-page HTML and CSS only website.
+## A multi-page HTML and CSS only website.
 
 The project contains four pages, (Home, Projects, Articles, Contact). The project uses only plain HTML and CSS. It's a demo of a portfolio website, not an actual portfolio, so you will see the same Exactly the same page structure, content, and the same styles.
 
@@ -8,7 +8,7 @@ In this project I have used the "Mobile-first" approach, where I designed the fu
 
 In this project I have used normalize.css, which you can find it in the assets/styles. This css page, is intended to "normalize" the default styles of the HTML elements across different browsers. It also fixes some issues, including the text-size, and others.
 
-###Structure:
+### Structure:
 1. Header
    1. Navbar.
       1. Profile.
