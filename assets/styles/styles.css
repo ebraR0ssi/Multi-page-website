@@ -15,14 +15,39 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-family: 'Shadows Into Light Two', cursive;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+p {
+    color: #666;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+ul li {
+    list-style: none;
+}
+
+a:not(.name):active {
+        color: #007BFF;
+        border-bottom: 2px solid #007BFF;
+}
+
+
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
-
+/* Header */
+header {
+    border-bottom: 3px solid #777;
+    padding-bottom: 50px;
+}
 header nav {
     display: flex;
     justify-content: space-between;
@@ -38,18 +63,17 @@ header nav .profile img {
     height: 40px;
     border-radius: 7px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 header nav .profile span {
     font-weight: bold;
     color: #333;
+    cursor: pointer;
 }
 
 header nav ul {
-    list-style: none;
     display: none;
-    margin: 0;
-    padding: 0;
 }
 header nav ul li a {
     text-decoration: none;
@@ -66,6 +90,93 @@ header nav svg.menu-icon:active {
     fill: #007BFF;
 }
 
+header .header-content {
+    text-align: center;
+    margin-top: 50px;
+}
+header .header-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+}
+header .header-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+/* Main Content */
+main {
+    border-bottom: 3px solid #777;
+}
+
+main .first-section {
+    margin-bottom: 50px;
+    border-bottom: 3px solid #777;
+}
+
+main .first-section section {
+    border-bottom: 3px solid #777;
+}
+
+main .first-section section ul {
+    padding-left: 0;
+}
+
+main .first-section section h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+main .first-section section h2, main .first-section section h3 {
+    margin-top: 20px;
+}
+main .first-section section.experience .intro {
+    border-bottom: 3px solid #777;
+}
+
+main .first-section section.experience .work {
+    margin-bottom: 20px;
+}
+
+main .first-section section.education .courses ul li{
+    position: relative;
+    margin-bottom: 2px;
+    margin-left: 20px;
+}
+main .first-section section.education .courses ul li::before {
+    content: "-";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Reviews */
+main h3.review-header {
+    margin-bottom: 50px;
+}
+
+main .reviews .review-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+main .reviews .review-card span {
+    color: #858484
+}
+
+/* footer */
+footer {
+    margin-top: 40px;
+}
+
 
 /* Media Queries */
 @media (min-width: 576px) {
@@ -76,8 +187,6 @@ header nav svg.menu-icon:active {
         list-style: none;
         display: flex;
         flex-direction: row;
-        margin: 0;
-        padding: 0;
     }
     header nav ul li {
         margin-right: 20px;
@@ -87,13 +196,8 @@ header nav svg.menu-icon:active {
     header nav ul li:last-child {
         margin-right: 0;
     }
-        header nav ul li a:hover {
+    a:not(.name):hover {
         color: #007BFF;
-    }
-
-    header nav ul li a.active {
-        color: #007BFF;
-        border-bottom: 2px solid #007BFF;
     }
 
     header nav ul li:not(:last-child)::after {
@@ -105,6 +209,36 @@ header nav svg.menu-icon:active {
         top: 50%;
         background-color: #7b7070;
         transform: translateY(-50%) rotate(15deg);
+    }
+
+    main .first-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    main .first-section section {
+        border-right: 3px solid #777;
+        border-bottom: none;
+    }
+
+    main .first-section section:first-child {
+        border-left: 3px solid #777;
+        padding-left: 20px;
+    }
+
+    main .first-section section.projects ul li {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #777;
+        padding-bottom: 5px;
+    }
+    main .reviews {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    main .reviews .review-card {
+        border-radius: 40px;
     }
 }
 
